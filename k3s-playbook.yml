@@ -13,7 +13,7 @@
         state: present
 
 - name: Install K3s on Master
-  hosts: cicdhub
+  hosts: hubalex
   become: yes
   tasks:
     - name: Download and install K3s
@@ -24,7 +24,7 @@
       register: node_token
 
 - name: Install K3s on Worker
-  hosts: monitoring
+  hosts: monialex 
   become: yes
   tasks:
     - name: Download and install K3s with Master token
